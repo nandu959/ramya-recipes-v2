@@ -1,0 +1,44 @@
+<div class="tabbar__content ons-tabbar__content ons-swiper"
+  style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);overflow: auto;">
+  <div style="padding: 1px 0 0 0;" *ngFor="let item of feeds?.rss?.channel?.item">
+    <div class="card">
+      <img [src]="item?.mediathumbnail?.url" alt="Onsen UI" style="width: 100%">
+      <div class="title">
+        {{item?.title}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tabbar tabbar--bottom tabbar--material">
+  <label class="tabbar__item tabbar--material__item">
+    <input type="radio" name="tabbar-material-c">
+    <button class="tabbar__button tabbar--material__button">
+      <i class="tabbar__icon tabbar--material__icon zmdi zmdi-favorite"></i>
+      <div class="tabbar__label tabbar--material__label">Favorites</div>
+    </button>
+  </label>
+
+  <label class="tabbar__item tabbar--material__item">
+    <input type="radio" name="tabbar-material-c" checked="checked">
+    <button class="tabbar__button tabbar--material__button">
+      <i class="tabbar__icon tabbar--material__icon zmdi zmdi-pizza"></i>
+      <div class="tabbar__label tabbar--material__label">Recipes</div>
+    </button>
+  </label>
+
+  <label class="tabbar__item tabbar--material__item">
+    <input type="radio" name="tabbar-material-c">
+    <button class="tabbar__button tabbar--material__button">
+      <i class="tabbar__icon tabbar--material__icon zmdi zmdi-layers"></i>
+      <div class="tabbar__label tabbar--material__label">Categories</div>
+    </button>
+  </label>
+
+  <label class="tabbar__item tabbar--material__item">
+    <input type="radio" name="tabbar-material-c">
+    <button class="tabbar__button tabbar--material__button">
+      <i class="tabbar__icon tabbar--material__icon zmdi zmdi-menu"></i>
+      <div class="tabbar__label tabbar--material__label">More</div>
+    </button>
+  </label>
+</div>
